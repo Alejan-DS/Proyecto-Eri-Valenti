@@ -1,6 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Cardo", serif !important;
+    color: #393e46;
+}
+/* Fuente */
+@font-face {
+    font-family: "Cardo", serif;
+    src: url("https://fonts.googleapis.com/css2?family=Cardo&display=swap");
 }
 
 /* -------------APLICANDO GRID AL INDEX------------------ */
@@ -8,83 +16,41 @@
     
     display: grid;
     grid-template-areas:
-        "header header header header header header"
-        "main main main main main main"
         "main-index main-index main-index main-index main-index main-index"
-        "main-index main-index main-index main-index main-index main-index"
-        "main-index main-index main-index main-index main-index main-index"
+        "grid-body grid-body grid-body grid-body grid-body grid-body"
         "footer footer footer footer footer footer";
 }
 
 /* ----------HEADER Y NAV------------------- */
 .header {
-    display: grid;
-    grid-template-areas:
-        "nav nav nav"
-        "nav nav nav"
-        "nav nav nav";
-    grid-area: header;
+    background-color: #f4f4f2;
 }
-.nav {
-    grid-area: nav;
-    background: rgb(176,176,174);
-    background: linear-gradient(90deg, rgba(176,176,174,1) 9%, rgba(230,230,230,1) 45%, rgba(230,230,230,1) 55%, rgba(176,176,174,1) 91%);
-    
-}
-.nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-ul li{
-    list-style-type:none;
-}
-ul li a{
-    text-decoration: none;
-    color: #000000;
-    font-size: 1.5rem;
-}
-.nav ul li img{
-    height: 8vh;
-    
-}
-.eri{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 9vw;
-}
+
 /*---------------FIN HEADER Y NAV-----------------  */
 
 /* ----------------MAIN--------------- */
-.main{
-    grid-area: main;
-
-}
-.frase-principal{
-    background-image: url(../recursos/imagenes/fondo\ index.jpeg) ;
+.main-index{
+    grid-area: main-index;
+    min-height: 100vh;
+    background-image: url(../recursos/imagenes/fondoparaindex.jpg) ;
     background-size: cover;
-    height: 50vh;
 }
+
 .frase-principal h1{
-    width: 25vw;
-    height: 20vh;
     display: flex;
-    align-items: center;
-    padding: 8vh;
-    padding-top: 12vh;
-    font-size: 2rem;
+    justify-content: center;
+    padding: 3.4375rem;
+    font-size: 1.5rem;
     text-align: center;
+    height: 100%;
 }
 .section-index{
     display: flex;
-    height: 100vh;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
+    margin-top: 3.125rem;
 }
 .section-index img{
     border: solid 1px black;
@@ -100,68 +66,135 @@ ul li a{
     margin-top: 1vh;
     font-size: 1.3rem;
 }
+/* contenedor de imagenes */
+.grid-body{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0.5rem;
+    margin: 3.125rem 0;
+    padding: 3.125rem;
+}
+.galery-items{
+    position: relative;
+}
+.galery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.5);
+}
+.galery-img:hover{
+    filter: opacity(1);
+}
+/* media query de contenedor de imagenes */
+@media (max-width:768px) {
+    .grid-body{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* ---------FIN MAIN ----------------*/
+
+/* -----------------FOOTER---------------- */
+.footer {
+    /* margin-top: 3rem; */
+    display: grid;
+    grid-area: footer;
+    background-color: #f4f4f2;
+    font-size: 1rem;
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 1.2rem;
+}
+.icon{
+    margin: 0.2rem;
+}
+.icon:hover a img{
+    transform: scale(1.2);
+}
+.footer ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer ul li{
+    list-style: none;
+    padding-left: 1rem;
+}
+.footer a{
+    text-decoration: none;
+}
+.flecha-arriba:hover{
+    transform: scale(1.2);
+}
+
+
 /* -------------MAIN - SOBRE MI------------ */
 
 .sobre-mi{
     display: flex;
+    justify-content: center;
 }
 .sobre-mi img{
-    padding: 2vw 2vw 2vw 2vw;
+    padding: 1.30rem;
 }
 .sobre-mi-2 {
-    margin: auto;
-    padding-left: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 60vh;
-    margin-right: 1.5vw;
+    padding: 1rem;
 }
-.sobre-mi-2 section h1{
+.sobre-mi-2 section h1 ,h2{
     font-size: 2rem;
-    padding: 2vh;
-    text-align: center;
-}
-.sobre-mi-2 section h2{
-    font: 2em sans-serif;
-    padding: 2vh;
+    padding: 1rem;
     text-align: center;
 }
 .sobre-mi-2 section p{
-    font: 1.3em sans-serif;
+    font-size: 1.3rem;
     text-align: center;
 }
-.sobre-mi-2 section ol li{
-    font: 1.3em sans-serif;
+/* Medias Query - sobre mi*/
+@media(max-width:768px){
+    .sobre-mi{
+        flex-wrap: wrap;
+    }
+    .sobre-mi img{
+        width: 22rem;
+    }
+    
 }
 /* -----------Main Commynity-------- */
+.main-community{
+    width: 100vw;
+}
 .div-community {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    text-align: center;
-    width: 80vw;
-    margin: auto;
-}
-.div-community h1{
-    padding: 3rem;
-}
-.div-community section{
+    margin: 1.5rem;
     font-size: 1.4rem;
-    width: 50rem;
+}
+
+.div-community section{
+    margin: 1.5rem;
 }
 .div-community-2{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    
 }
 .div-community-2 img{
-    height: 20rem;
-    padding: 3rem 3rem 3rem 3rem;
+    height:20rem;
+    
+
 }
 .div-community-2 div{
     padding: 0 3rem 0 3rem;
@@ -170,10 +203,17 @@ ul li a{
     justify-content: center;
     font-size: 1.4rem;
     width: 50rem;
+    margin: 2rem;
 }
-/* -------------MAIN PROYECTOS------------ */
+@media(max-width:768px){
+    .main-community{
+        padding: 0;
+        text-align: start;
+    }
+}
+/* ------------MAIN PROYECTOS------------ */
 .proyectos{
-    margin-left: 45vw;
+    margin-left: 45rem;
     padding-top: 2rem;
 }
 .section-proyectos{
@@ -203,72 +243,3 @@ form{
 
 }
 
-
-/* ---------FIN MAIN ----------------*/
-
-/* -----------------FOOTER---------------- */
-.footer {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 0.5fr;
-    grid-row: 2fr 1fr;
-    grid-template-areas:
-    "flecha-arriba eri2 sigueme"
-    "coppy coppy coppy" 
-    ;
-    grid-area: footer;
-    background: rgb(176,176,174);
-    background: linear-gradient(90deg, rgba(176,176,174,1) 9%, rgba(230,230,230,1) 45%, rgba(230,230,230,1) 55%, rgba(176,176,174,1) 91%);
-
-}
-.footer ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-}
-.footer ul li img{
-    height: 9.1vh;
-    display: flex;
-}
-.flecha-arriba{
-    grid-area: flecha-arriba;
-    padding-left: 2vw;
-}
-.eri2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-area: eri2;
-    padding-left: 20vw;
-    flex-wrap: wrap;
-
-}
-.sigueme{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-left: 2vw;
-    grid-area: sigueme;
-    padding-right: 2vw ;
-}
-.sigueme div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.coppy{
-    grid-area: coppy;
-}
-footer section{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 1vh;
-    background: rgb(176,176,174);
-    background: linear-gradient(90deg, rgba(176,176,174,1) 9%, rgba(230,230,230,1) 45%, rgba(230,230,230,1) 55%, rgba(176,176,174,1) 91%);
-}
