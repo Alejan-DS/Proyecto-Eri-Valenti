@@ -25,7 +25,10 @@
 .header {
     background-color: #f4f4f2;
 }
-
+.nav-item:hover a{
+    transform: scale(1.1);
+    color: #ff7f50 !important;
+}
 /*---------------FIN HEADER Y NAV-----------------  */
 
 /* ----------------MAIN--------------- */
@@ -130,6 +133,7 @@
 }
 .footer a{
     text-decoration: none;
+    /* color: black; */
 }
 .flecha-arriba:hover{
     transform: scale(1.2);
@@ -212,22 +216,100 @@
     }
 }
 /* ------------MAIN PROYECTOS------------ */
-.proyectos{
-    margin-left: 45rem;
-    padding-top: 2rem;
-}
-.section-proyectos{
+.caption-style-3{
+    list-style-type: none;
     display: flex;
-    height: 80vh;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-around;
+    width: 98vw;
     justify-content: space-around;
+    margin-bottom: 6rem;
+}
+
+.caption-style-3 li{
+    float: left;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 2.5rem;
+}
+
+.caption-style-3 li:hover .caption{
+    opacity: 1;
+    transform: translateY(-100px);
+    -webkit-transform:translateY(-100px);
+    -moz-transform:translateY(-100px);
+    -ms-transform:translateY(-100px);
+    -o-transform:translateY(-100px);
+}
+
+.caption-style-3 li:hover img{
+    opacity: 1;
+    transform: translateY(-40px);
+    -webkit-transform:translateY(-40px);
+    -moz-transform:translateY(-40px);
+    -ms-transform:translateY(-40px);
+    -o-transform:translateY(-40px);
 
 }
-.section-proyectos img{
-    border: solid 1px black;
+
+
+.caption-style-3 li img{
+    margin: 1px;
+    padding: 0px;
+    float: left;
+    z-index: 0;
 }
+
+
+.caption-style-3 .caption{
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top:300px;
+    -webkit-transition:all 0.15s ease-in-out;
+    -moz-transition:all 0.15s ease-in-out;
+    -o-transition:all 0.15s ease-in-out;
+    -ms-transition:all 0.15s ease-in-out;
+    transition:all 0.15s ease-in-out;
+}
+
+.caption-style-3 img{
+    -webkit-transition:all 0.15s ease-in-out;
+    -moz-transition:all 0.15s ease-in-out;
+    -o-transition:all 0.15s ease-in-out;
+    -ms-transition:all 0.15s ease-in-out;
+    transition:all 0.15s ease-in-out;
+
+}
+.caption-style-3 .blur{
+    background-color: #ff7f50;
+    height: 300px;
+    width: 400px;
+    z-index: 5;
+    position: absolute;
+}
+
+.caption-style-3 .caption-text h1{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.caption-style-3 .caption-text{
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    top:20px;
+}
+
+/* ----- */
+
+.project{
+    text-align: center;
+    padding-top: 2rem;
+}
+
 /* --------MAIN CONTACTAME------------ */
 .contactame{
     display: flex;
