@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Cardo", serif !important;
-    color: #393e46;
 }
 /* Fuente */
 @font-face {
@@ -13,21 +11,27 @@
 
 /* -------------APLICANDO GRID AL INDEX------------------ */
 .grid-padre1 {
-    
     display: grid;
     grid-template-areas:
         "main-index main-index main-index main-index main-index main-index"
         "grid-body grid-body grid-body grid-body grid-body grid-body"
         "footer footer footer footer footer footer";
-}
+        font-family: "Cardo", serif !important;
+        color: #393e46;
+    }
 
 /* ----------HEADER Y NAV------------------- */
 .header {
     background-color: #f4f4f2;
 }
+a{
+    font-size: 1.25rem !important;
+    font-family: "Cardo", serif !important;
+    color: #393e46!important ;
+}
 .nav-item:hover a{
     transform: scale(1.1);
-    color: #ff7f50 !important;
+    color: #be5e3b !important;
 }
 /*---------------FIN HEADER Y NAV-----------------  */
 
@@ -55,8 +59,9 @@
     justify-content: space-around;
     margin-top: 3.125rem;
 }
-.section-index img{
-    border: solid 1px black;
+.section-index a:hover{
+    transform: scale(1.1);
+    color: #be5e3b !important;
 }
 .section-index div{
     display: flex;
@@ -81,10 +86,22 @@
     position: relative;
 }
 .galery-img{
+    animation-name: galery-img1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-delay: 3000ms;
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: sepia(0.5);
+}
+@keyframes galery-img1{
+    0%{scale: 1.1;translate: -1500px }
+    15%{scale: 1.1;}
+    25%{scale: 1.1;}
+    40%{scale: 1.1;translate: 10px;}
+    50%{scale: 1.1;translate: 10px;}
 }
 .galery-img:hover{
     filter: opacity(1);
@@ -135,10 +152,17 @@
     text-decoration: none;
     /* color: black; */
 }
+.flecha-arriba{
+    position: fixed;
+    bottom: 8rem;
+    right: 1rem;
+}
 .flecha-arriba:hover{
     transform: scale(1.2);
 }
-
+.coppy{
+    margin-top: 1.25rem;
+}
 
 /* -------------MAIN - SOBRE MI------------ */
 
@@ -282,7 +306,7 @@
 
 }
 .caption-style-3 .blur{
-    background-color: #ff7f50;
+    background-color: #be5e3b;
     height: 300px;
     width: 400px;
     z-index: 5;
