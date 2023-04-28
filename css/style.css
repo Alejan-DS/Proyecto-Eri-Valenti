@@ -5,8 +5,9 @@
 }
 /* Fuente */
 @font-face {
-    font-family: "Cardo", serif;
-    src: url("https://fonts.googleapis.com/css2?family=Cardo&display=swap");
+    font-family: 'Cardo', serif;
+    font-family: 'Cinzel', serif;
+    src: url("'https://fonts.googleapis.com/css2?family=Cardo&family=Cinzel:wght@600&display=swap'");
 }
 
 /* -------------APLICANDO GRID AL INDEX------------------ */
@@ -22,7 +23,7 @@
 
 /* ----------HEADER Y NAV------------------- */
 .header {
-    background-color: #f4f4f2;
+    background-color: #ffffff;
 }
 a{
     font-size: 1.25rem !important;
@@ -39,18 +40,21 @@ a{
 .main-index{
     grid-area: main-index;
     min-height: 100vh;
-    background-image: url(../recursos/imagenes/fondoparaindex.jpg) ;
     background-size: cover;
 }
 
 .frase-principal h1{
+    background-image: url(../recursos/imagenes/fondoparaindex.jpg) ;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 3.4375rem;
-    font-size: 1.5rem;
+    font-size: 2.6rem;
     text-align: center;
-    height: 100%;
-}
+    text-transform: uppercase;
+    height: 100vh;
+    font-family:'Cinzel', serif;
+} 
 .section-index{
     display: flex;
     flex-direction: row;
@@ -120,7 +124,7 @@ a{
     /* margin-top: 3rem; */
     display: grid;
     grid-area: footer;
-    background-color: #f4f4f2;
+    background-color: #ffffff;
     font-size: 1rem;
 }
 .redes{
@@ -170,14 +174,19 @@ a{
     display: flex;
     justify-content: center;
 }
-.sobre-mi img{
-    padding: 1.30rem;
+.video{
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
 }
 .sobre-mi-2 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 1rem;
+}
+.sobre-mi-2 section p{
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .sobre-mi-2 section h1 ,h2{
     font-size: 2rem;
