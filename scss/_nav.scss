@@ -1,0 +1,21 @@
+/* ----------HEADER Y NAV------------------- */
+.header {
+    background-color: $white;
+    a{
+        font-size: 1.25rem !important;
+        font-family: "Cardo", serif !important;
+        color: $gris!important ;
+    }
+    .nav-item a{
+        &:hover{
+            transform: scale(0.9);
+            color: $ladrillo !important;
+        }
+    }
+    .logo-eri{
+        width: 6.25rem;
+    }
+}
+
+
+/*---------------FIN HEADER Y NAV-----------------  */
