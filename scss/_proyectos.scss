@@ -21,7 +21,6 @@
         width: 98vw;
         margin-bottom: 6rem;
         li{
-            float: left;
             padding: 0px;
             position: relative;
             overflow: hidden;
@@ -29,6 +28,10 @@
             &:hover .caption{
                 opacity: 1;
                 transform: translateY(-100px);
+            }
+            &:hover img{
+                opacity: 1;
+                transform: translateY(-40px);
             }
         }
         .capa-caption{
@@ -38,39 +41,34 @@
                 height: 18.75rem;
                 margin: 1px;
                 padding: 0px;
-                float: left;
-                z-index: 0;
-                &:hover{
-                    opacity: 1;
-                    transform: translateY(-40px);
-                }
+                z-index: 9;
             }
+            .caption{
+                cursor: pointer;
+                position: absolute;
+                opacity: 0;
+                top:18.75rem;
+                .blur{
+                    background-color: $gris;
+                    height: 18.75rem;
+                    width: 25rem;
+                    z-index: 5;
+                    position: absolute;
+                }
+                .caption-text{
+                    z-index: 10;
+                    color: $white;
+                    position: absolute;
+                    width: 18.75rem;
+                    height: 18.75rem;
+                    text-align: center;
+                    top:1.25rem;
+                    h3{
+                        text-transform: uppercase;
+                        font-size: 1.125rem;
+                    }
+                }
         }
-        .caption{
-            cursor: pointer;
-            position: absolute;
-            opacity: 0;
-            top:18.75rem;
-            .blur{
-                background-color: $gris;
-                height: 18.75rem;
-                width: 25rem;
-                z-index: 5;
-                position: absolute;
-            }
-            .caption-text{
-                z-index: 10;
-                color: $white;
-                position: absolute;
-                width: 18.75rem;
-                height: 18.75rem;
-                text-align: center;
-                top:1.25rem;
-                h3{
-                    text-transform: uppercase;
-                    font-size: 1.125rem;
-                }
-            }
         }
     }
 /*card feed*/

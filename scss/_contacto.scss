@@ -19,7 +19,8 @@
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
         border-radius: 0.625rem;
         fieldset{
-            @extend .flex-column;
+            display: flex;
+            flex-direction: column;
             color:$white;
             legend{
                 font-size: 1.875rem;

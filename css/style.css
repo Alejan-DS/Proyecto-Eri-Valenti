@@ -9,7 +9,7 @@
   font-family: 'Cinzel', serif;
   src: url("'https://fonts.googleapis.com/css2?family=Cardo&family=Cinzel:wght@600&display=swap'"); }
 
-.flex-column, .main-index .section-index div, .main-community .div-community-2 div, .main-contact form fieldset {
+.flex-column, .main-index .section-index div, .main-community .div-community-2 div {
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -139,7 +139,7 @@
     align-items: baseline;
     margin-top: 1.2rem; }
     .footer .redes .icon {
-      margin: 0.2rem;
+      margin: 0.8rem;
       width: 2.5rem; }
       .footer .redes .icon a img:hover {
         transform: scale(1.2); }
@@ -157,12 +157,15 @@
       padding-left: 1rem; }
   .footer .flecha-arriba {
     position: fixed;
-    bottom: 8rem;
+    bottom: 4rem;
     right: 1rem; }
     .footer .flecha-arriba:hover {
       transform: scale(1.2); }
   .footer .coppy {
-    margin-top: 1.25rem; }
+    margin-top: 1.25rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 'Cinzel', serif; }
 
 /* -------------MAIN - SOBRE MI------------ */
 /*bloque 1 izquierda*/
@@ -211,17 +214,18 @@
   .main-community .div-community-2 {
     flex-wrap: wrap;
     width: 100%; }
+    .main-community .div-community-2 h2 {
+      margin-top: 1rem; }
     .main-community .div-community-2 p {
-      text-align: center; }
+      text-align: center;
+      padding: 0.7rem; }
     .main-community .div-community-2 img {
       height: 40rem;
       width: 20rem;
       margin-top: 6rem; }
     .main-community .div-community-2 div {
-      padding: 0 3rem 0 3rem;
       font-size: 1.4rem;
-      width: 50rem;
-      margin: 2rem; }
+      width: 50rem; }
     .main-community .div-community-2 ul li {
       list-style-image: url("../recursos/iconos/network.png");
       list-style-position: inside;
@@ -254,7 +258,6 @@
     width: 98vw;
     margin-bottom: 6rem; }
     .main-proyectos .caption-style-3 li {
-      float: left;
       padding: 0px;
       position: relative;
       overflow: hidden;
@@ -262,6 +265,9 @@
       .main-proyectos .caption-style-3 li:hover .caption {
         opacity: 1;
         transform: translateY(-100px); }
+      .main-proyectos .caption-style-3 li:hover img {
+        opacity: 1;
+        transform: translateY(-40px); }
     .main-proyectos .caption-style-3 .capa-caption {
       box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; }
       .main-proyectos .caption-style-3 .capa-caption img {
@@ -269,33 +275,29 @@
         height: 18.75rem;
         margin: 1px;
         padding: 0px;
-        float: left;
-        z-index: 0; }
-        .main-proyectos .caption-style-3 .capa-caption img:hover {
-          opacity: 1;
-          transform: translateY(-40px); }
-    .main-proyectos .caption-style-3 .caption {
-      cursor: pointer;
-      position: absolute;
-      opacity: 0;
-      top: 18.75rem; }
-      .main-proyectos .caption-style-3 .caption .blur {
-        background-color: #393e46;
-        height: 18.75rem;
-        width: 25rem;
-        z-index: 5;
-        position: absolute; }
-      .main-proyectos .caption-style-3 .caption .caption-text {
-        z-index: 10;
-        color: white;
+        z-index: 9; }
+      .main-proyectos .caption-style-3 .capa-caption .caption {
+        cursor: pointer;
         position: absolute;
-        width: 18.75rem;
-        height: 18.75rem;
-        text-align: center;
-        top: 1.25rem; }
-        .main-proyectos .caption-style-3 .caption .caption-text h3 {
-          text-transform: uppercase;
-          font-size: 1.125rem; }
+        opacity: 0;
+        top: 18.75rem; }
+        .main-proyectos .caption-style-3 .capa-caption .caption .blur {
+          background-color: #393e46;
+          height: 18.75rem;
+          width: 25rem;
+          z-index: 5;
+          position: absolute; }
+        .main-proyectos .caption-style-3 .capa-caption .caption .caption-text {
+          z-index: 10;
+          color: white;
+          position: absolute;
+          width: 18.75rem;
+          height: 18.75rem;
+          text-align: center;
+          top: 1.25rem; }
+          .main-proyectos .caption-style-3 .capa-caption .caption .caption-text h3 {
+            text-transform: uppercase;
+            font-size: 1.125rem; }
   .main-proyectos .card-feed {
     flex-wrap: wrap;
     background-image: url(../recursos/imagenes/fondoparaindex.jpg);
@@ -330,6 +332,8 @@
     box-shadow: #26394d 0px 20px 30px -10px;
     border-radius: 0.625rem; }
     .main-contact form fieldset {
+      display: flex;
+      flex-direction: column;
       color: white; }
       .main-contact form fieldset legend {
         font-size: 1.875rem; }

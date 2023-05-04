@@ -14,7 +14,7 @@
         align-items: baseline;
         margin-top: 1.2rem;
         .icon{
-            margin: 0.2rem;
+            margin: 0.8rem;
             width: 2.5rem;
             a img{
                 &:hover{
@@ -41,7 +41,7 @@
     }
     .flecha-arriba{
         position: fixed;
-        bottom: 8rem;
+        bottom: 4rem;
         right: 1rem;
         &:hover{
             transform: scale(1.2);
@@ -49,6 +49,10 @@
     }
     .coppy{ 
         margin-top: 1.25rem;
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: 'Cinzel', serif;
+
     }
 }
 
